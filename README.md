@@ -30,8 +30,17 @@ At one upload per day this is roughly 1,750 units — well inside the default qu
 Credentials
 OAuth client secrets and tokens are stored locally and are not part of this repository.
 
-Privacy
-See PRIVACY.md. In short: the tool collects nothing about anyone.
+Use of YouTube API Services
+This application uses YouTube API Services.
 
+By using this application you agree to be bound by the YouTube Terms of Service.
+
+Google's privacy practices are described in the Google Privacy Policy.
+
+Access granted to this application can be revoked at any time via the Google security settings page.
+
+Privacy policy and terms
+Privacy Policy — in short: the tool collects nothing about anyone, and stores only a local OAuth token
+Terms of Service
 Licence
 Personal use. Not offered for redistribution.
