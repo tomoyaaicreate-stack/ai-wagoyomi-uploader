@@ -1,46 +1,76 @@
-AI Wagoyomi Uploader
-A personal command-line tool that uploads my own videos to my own YouTube channel using the YouTube Data API v3.
+# AI Wagoyomi Uploader
 
-This is not a product. It is a private utility with one user — me. It is published here only so that the source and the privacy policy are publicly inspectable.
+A personal command-line tool that uploads my own videos to my own YouTube
+channel using the YouTube Data API v3.
 
-Why it exists
-I run AI和ごよみ, a channel about the traditional Japanese calendar — the 24 solar terms, seasonal customs, and the origins of Japanese annual events. I write, narrate and render every video myself.
+**This is not a product.** It is a private utility with one user — me. It is
+published here only so that the source and the privacy policy are publicly
+inspectable.
 
-I publish roughly one video a day. Each upload needs a title, a description with chapter timestamps, a tag list, a thumbnail and a scheduled release time. I already write all of that into a local text file while producing the video. Re-typing it by hand into YouTube Studio is slow and easy to get wrong, so this tool submits it through the API instead.
+## Why it exists
 
-What it does
-Reads the metadata I have already written for an episode
-Uploads the video file
-Sets the title, description, tags and scheduled publish time
-Uploads the thumbnail
-Adds the video to the relevant playlist
-What it deliberately does not do
-It does not read or collect data about any other user or channel
-It does not display YouTube content anywhere
-It has no server, no database, no analytics and no telemetry
-It is not distributed to anyone
-API usage
-Method	Approx. quota cost	Frequency
-videos.insert	1,600 units	once per upload
-thumbnails.set	50 units	once per upload
-playlistItems.insert	50 units	once per upload
-videos.update	50 units	rarely, to fix a mistake
-At one upload per day this is roughly 1,750 units — well inside the default quota of 10,000 units per day. No quota extension is needed.
+I run [AI和ごよみ](https://www.youtube.com/channel/UC6gs5VS8bFNF3moWmCwadHA),
+a channel about the traditional Japanese calendar — the 24 solar terms,
+seasonal customs, and the origins of Japanese annual events. I write, narrate
+and render every video myself.
 
-Credentials
-OAuth client secrets and tokens are stored locally and are not part of this repository.
+I publish roughly one video a day. Each upload needs a title, a description
+with chapter timestamps, a tag list, a thumbnail and a scheduled release time.
+I already write all of that into a local text file while producing the video.
+Re-typing it by hand into YouTube Studio is slow and easy to get wrong, so this
+tool submits it through the API instead.
 
-Use of YouTube API Services
-This application uses YouTube API Services.
+## What it does
 
-By using this application you agree to be bound by the YouTube Terms of Service.
+1. Reads the metadata I have already written for an episode
+2. Uploads the video file
+3. Sets the title, description, tags and scheduled publish time
+4. Uploads the thumbnail
+5. Adds the video to the relevant playlist
 
-Google's privacy practices are described in the Google Privacy Policy.
+## What it deliberately does not do
 
-Access granted to this application can be revoked at any time via the Google security settings page.
+- It does not read or collect data about any other user or channel
+- It does not display YouTube content anywhere
+- It has no server, no database, no analytics and no telemetry
+- It is not distributed to anyone
 
-Privacy policy and terms
-Privacy Policy — in short: the tool collects nothing about anyone, and stores only a local OAuth token
-Terms of Service
-Licence
+## API usage
+
+| Method | Approx. quota cost | Frequency |
+|---|---|---|
+| `videos.insert` | 1,600 units | once per upload |
+| `thumbnails.set` | 50 units | once per upload |
+| `playlistItems.insert` | 50 units | once per upload |
+| `videos.update` | 50 units | rarely, to fix a mistake |
+
+At one upload per day this is roughly 1,750 units — well inside the default
+quota of 10,000 units per day. **No quota extension is needed.**
+
+## Credentials
+
+OAuth client secrets and tokens are stored locally and are **not** part of this
+repository.
+
+## Use of YouTube API Services
+
+**This application uses YouTube API Services.**
+
+By using this application you agree to be bound by the
+**[YouTube Terms of Service](https://www.youtube.com/t/terms)**.
+
+Google's privacy practices are described in the
+**[Google Privacy Policy](https://policies.google.com/privacy)**.
+
+Access granted to this application can be revoked at any time via the
+**[Google security settings page](https://myaccount.google.com/permissions)**.
+
+## Privacy policy and terms
+
+- **[Privacy Policy](PRIVACY.md)** — in short: the tool collects nothing about
+  anyone, and stores only a local OAuth token
+- **[Terms of Service](TERMS.md)**
+
+## Licence
+
 Personal use. Not offered for redistribution.
